@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.contenedor-tarjetas {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.tarjeta {
+    width: 220px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    /* Flexbox hace las tarjetas de la misma altura automáticamente
+       (align-items: stretch es el valor por defecto) */
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-imagen {
+    width: 100%;
+    height: 130px;
+    background-color: #cfcfcf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 14px;
+}
+
+.tarjeta-contenido {
+    padding: 15px;
+    text-align: center;
+    /* Ocupa todo el espacio disponible, empujando el botón hacia abajo */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-contenido h2 {
+    color: #1b6e2e;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.tarjeta-contenido p {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.tarjeta-precio {
+    color: #e07b1a;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+    /* Empuja el precio (y lo que sigue) hacia abajo si sobra espacio */
+    margin-top: auto;
+}
+
+.tarjeta-boton {
+    padding: 0 15px 15px;
+}
+
+.tarjeta-boton a {
+    display: block;
+    background-color: #e07b1a;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.tarjeta-boton a:hover {
+    background-color: #c66a12;
+}

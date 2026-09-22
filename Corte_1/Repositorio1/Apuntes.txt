@@ -1,0 +1,33 @@
+nano indice.txt || crear archivo
+cat indice.txt || ver contenido del archivo
+git diff || ver cambios aplicados
+git status || inicia
+git add .
+
+git commit -m "se añade el primer archivo HTML, primer interfaz que es el login"
+git commin -m "TITULO"
+git log
+
+devolver comentario (commit ID) 
+git checkout (ID COMMIN)
+git checkout master || abrir documento y vuelve al estado del archivo
+
+git switch -C "Rama2" || crear rama
+git Branch || muestra las ramas - permite modificar sin afectar el archivo ppal
+
+git switch master || vuelvo al master
+git switch Rama2 || volver a la rama creada
+git mergue master || unir archivos de la rama
+
+git push || subir al repositorio
+git push origin || 
+git push origin master
+git push origin Rama2
+
+
+
+
+
+
+
+
