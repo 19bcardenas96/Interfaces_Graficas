@@ -1,0 +1,188 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rebeccapurple;
+    display: flex;
+    justify-content: center;
+}
+
+/* 1. Contenedor de 1500px de ancho */
+.contenedor-principal {
+    width: 100%;
+    max-width: 1500px;
+    background-color: #ffffff;
+}
+
+/* Header: Fondo de color, logo a la derecha, título y subtítulo a la izquierda */
+.header {
+    background-color: #2b3e50;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-texto h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.header-texto h2 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #cbd5e1;
+}
+
+.logo img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+}
+
+/* Nav: Fondo de color con 8 elementos en línea */
+.nav {
+    background-color: blueviolet;
+}
+
+.menu-icono {
+    display: none; /* Oculto por defecto */
+    color: #ffffff;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #0f172a;
+    cursor: pointer;
+}
+
+.menu-lista {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding: 12px 0;
+}
+
+.menu-lista li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    transition: background-color 0.3s;
+}
+
+.menu-lista li a:hover {
+    background-color: #3b82f6;
+    border-radius: 4px;
+}
+
+/* Contenido Principal (Section + Aside en fila) */
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Section a la izquierda al 70% */
+.section {
+    width: 70%;
+    background-color: #f1f5f9;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* 6 articles dispuestas en dos columnas */
+.article {
+    width: calc(50% - 8px);
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+.article h3 {
+    margin-bottom: 8px;
+    color: #1e293b;
+}
+
+/* Aside a la derecha al 30% */
+.aside {
+    width: 30%;
+    background-color: #e2e8f0;
+    padding: 20px;
+    color: #0f172a;
+}
+
+/* Footer con fondo de color */
+.footer {
+    background-color: #2b3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+}
+
+.footer p {
+    margin: 4px 0;
+}
+
+/* ===================================================
+   MEDIA QUERIES
+   =================================================== */
+
+/* Pantallas grandes (hasta 1000px): section 60%, aside 40% y colores diferentes */
+@media (max-width: 1000px) {
+    .section {
+        width: 60%;
+        background-color: blue; /* Cambio de color */
+    }
+
+    .aside {
+        width: 40%;
+        background-color: red; /* Cambio de color */
+    }
+}
+
+/* Pantallas medianas (hasta 800px): articles en una sola columna, section y aside al 50% */
+@media (max-width: 800px) {
+    .section {
+        width: 50%;
+    }
+
+    .aside {
+        width: 50%;
+    }
+
+    .article {
+        width: 100%; /* Articles uno debajo de otro */
+    }
+}
+
+/* Pantallas pequeñas (hasta 680px): logo encima centrado, título y subtítulo debajo centrados */
+@media (max-width: 680px) {
+    .header {
+        flex-direction: column-reverse; /* Pone el logo arriba */
+        text-align: center;
+        gap: 15px;
+    }
+
+    .header-texto {
+        text-align: center;
+    }
+}
+
+/* Pantallas extra pequeñas (hasta 400px): section y aside al 100%, menú desaparece y muestra texto/icono */
+@media (max-width: 400px) {
+    .section,
+    .aside {
+        width: 100%;
+    }
+
+    .menu-lista {
+        display: none; /* Desaparece el menú de 8 botones */
+    }
+
+    .menu-icono {
+        display: block; /* Muestra el icono / texto de menú */
+    }
+}

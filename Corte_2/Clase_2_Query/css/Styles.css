@@ -1,0 +1,35 @@
+img{
+    background: red;
+}
+
+@media (max-width: 1080px){
+    img{
+        width: 800px;  /* Define el ancho fijo */
+        height: 400px; /* Define el alto fijo */
+    }
+}
+
+@media (max-width: 640px){
+    img{
+        width: 400px;  /* Define el ancho fijo */
+        height: 120px; /* Define el alto fijo */
+    }
+}
+
+@media (max-width: 480px){
+    img{
+        display: none;
+    }
+}
+
+.P1{
+    background: green
+}
+
+.P2{
+    background: blue
+}
+
+.P3{
+    background: black
+}
